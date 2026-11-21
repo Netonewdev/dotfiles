@@ -1,0 +1,70 @@
+@import "colors.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "SF Pro Display", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: @transparent;
+    color: @foreground;
+}
+
+tooltip {
+  background: @background;
+  border: 1px solid rgba(100, 114, 125, 0.5);
+}
+tooltip label {
+  color: @surface;
+}
+
+/* Contêiner principal dos Workspaces (A pílula escura externa) */
+#workspaces {
+    background-color: @surface; /* Cor de superfície escura do Matugen */
+    border-radius: 100px;
+    margin: 4px 10px; /* Margem para não encostar na borda da tela */
+    padding: 0px 5px; /* Espaçamento interno */
+    border: none;
+}
+
+/* Estilo geral dos botões numéricos não ativos (Os claros na foto) */
+#workspaces button {
+    background-color: @background; /* Cor de fundo clara/cinza do Matugen */
+    color: @foreground; /* Cor do texto (preto ou cinza escuro) */
+    border-radius: 100px;
+    margin: 5px 3px; /* Espaçamento entre os botões */
+    padding: 0px 10px;
+    min-width: 25px; /* Garante que os números fiquem centralizados */
+    border: none;
+    box-shadow: none;
+}
+
+/* Estilo do botão focado/ativo (O azul na foto) */
+#workspaces button.focused,
+#workspaces button.active {
+    background-color: @primary; /* Cor principal (azul) do Matugen */
+    color: #ffffff; /* Texto branco no botão azul */
+}
+
+/* Efeito ao passar o mouse */
+#workspaces button:hover {
+    background-color: @primary;
+    opacity: 0.8;
+}
+
+
+#clock,
+#pulseaudio,
+#network {
+    background-color: @primary;
+    color: #121212;
+    border-radius: 100px;
+    margin: 10px;
+    padding: 10px;
+    
+}
+
+
